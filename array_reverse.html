@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home Task 13.03.2017</title>
+</head>
+<body>
+    <script>
+        var arr = ['a', 'b', 'c', 'd', 5, 6, 7,8];
+
+        var len = arr.length;
+        if (len%2 == 1)  {
+            var center = parseInt(arr.length / 2);
+            //document.write(center);
+
+            var left = center - 1;
+            var right = center + 1;
+
+            while (left >= 0) {
+                var temp = arr[left];
+                arr[left] = arr[right];
+                arr[right] = temp;
+                left--;
+                right++;
+                }
+            }
+        else {
+            var right = len/2;
+            var left = len/2 - 1;
+
+            while (left>=0){
+                var temp = arr[left];
+                arr[left] = arr[right];
+                arr[right] = temp;
+                left--;
+                right++;
+            }
+            document.write(arr);
+
+        }
+
+    </script>
+
+   </body>
+</html>
